@@ -1,0 +1,209 @@
+/* ============= Global Styles ========== */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #111111;
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+/* =========== end Global Styles ========== */
+
+/* ============== Header Page ============= */
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.logo-simply {
+  font-style: italic;
+}
+
+.nav-link {
+  font-weight: 500;
+  line-height: 1.14;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #fd9222;
+}
+/* ============ end Header Page =========== */
+
+/* ============== Hero Section ============ */
+.main-hero {
+  background-color: #1e1823;
+}
+
+.main-title-one {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  width: 484px;
+}
+
+.hero-button {
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #fd9222;
+}
+
+.hero-link-him {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.hero-link-scroll {
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.hero-button:focus,
+.hero-button:hover {
+  color: #fd9222;
+  background-color: #fcf1e0;
+}
+
+.hero-link-him:focus,
+.hero-link-him:hover,
+.hero-link-scroll:focus,
+.hero-link-scroll:hover {
+  color: #fd9222;
+  background-color: #fafafa;
+}
+/* =========== end Hero Section =========== */
+
+/* =========== Benefits section =========== */
+.main-benefits {
+  background-color: #1e1823;
+}
+
+.main-title-three {
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.white-text {
+  color: #ffffffb3;
+}
+/* ========= end Benefits section ========= */
+
+/* ========== Ingredients Section ========= */
+.main-title-two {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111111;
+}
+
+.orange-span {
+  color: #fd9222;
+}
+
+.black-text {
+  color: #111111;
+}
+
+.white-text-ingredients {
+  color: #ffffff;
+}
+
+.ingredients-link-orange {
+  background-color: #fd9222;
+}
+
+.ingredients-link-black {
+  background-color: #1e1823;
+}
+/* ======= end Ingredients Section ======== */
+
+/* ======== How it’s made Section ========= */
+.main-him .main-title-three {
+  color: #111111;
+}
+/* ====== end How it’s made Section ======= */
+.main-reviews .main-title-three {
+  color: #111111;
+}
+/* =========== Reviews Section ============ */
+.black-text-reviews {
+  color: #111111b3;
+}
+
+.reviews-button {
+  font-weight: 600;
+  font-size: 18px;
+  color: #111111;
+}
+
+.reviews-button:focus,
+.reviews-button:hover {
+  color: #ffffff;
+  background-color: #fd9222;
+}
+/* ========= end Reviews Section ========== */
+
+/* ============= Footer Page ============== */
+.footer-page {
+  background-color: #1e1823;
+}
+
+.footer-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21429;
+  color: #ffffff;
+}
+
+.address-text {
+  font-weight: 500;
+  color: #ffffff;
+  font-style: normal;
+}
+
+.address-link {
+  color: #fff;
+  font-style: normal;
+}
+
+.address-link:focus,
+.address-link:hover {
+  color: #fd9222;
+  background-color: #fafafa;
+}
+
+.footer-page .nav-link {
+  color: #ffffff;
+}
+
+.footer-page .nav-link:hover,
+.footer-page .nav-link:focus {
+  color: #fd9222;
+  background-color: #fafafa;
+}
+
+/* =========== end Footer Page ============ */
