@@ -1,4 +1,8 @@
 /* ============= Global Styles ========== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -50,7 +54,6 @@ img {
 /* ============== Header Page ============= */
 .header-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -60,6 +63,9 @@ img {
   line-height: 1.11;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 
 .logo-simply {
@@ -67,6 +73,8 @@ img {
 }
 
 .header-menu {
+  margin-right: 90px;
+  margin-left: auto;
   display: flex;
   gap: 24px;
 }
@@ -77,26 +85,48 @@ img {
   display: block;
   padding-top: 30px;
   padding-bottom: 30px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-menu {
+  display: flex;
+  gap: 18px;
+}
+
+.social-links {
+  stroke: #111111;
+  fill: transparent;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: #fd9222;
 }
+
+.social-links:hover,
+.social-links:focus {
+  stroke: #fd9222;
+}
+
 /* ============ end Header Page =========== */
 
 /* ============== Hero Section ============ */
-.main-hero {
-  background-color: #1e1823;
-  border-radius: 15px;
-}
 
 .main-hero .container {
+  background-color: #1e1823;
   padding-top: 381px;
   padding-bottom: 40px;
-  padding-left: 52px;
-  padding-right: 52px;
+  padding-left: 56px;
+  padding-right: 56px;
   margin-bottom: 72px;
+  background-image:
+    linear-gradient(rgba(30, 24, 35, 0.4), rgba(30, 24, 35, 0.4)),
+    url("../images/chocolate-bgi.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  border-radius: 15px;
 }
 
 .main-title-one {
@@ -112,11 +142,6 @@ img {
 .hero-buttons-links {
   display: flex;
   align-items: center;
-  gap: 14px;
-}
-
-.hero-link-scroll {
-  margin-left: auto;
 }
 
 .hero-button {
@@ -130,9 +155,14 @@ img {
   border-radius: 100px;
   width: 144px;
   height: 45px;
+  transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-link-him {
+  margin-left: 14px;
+  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,12 +172,33 @@ img {
   border-radius: 100px;
   width: 183px;
   height: 45px;
+  transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-link-scroll {
   font-weight: 500;
   letter-spacing: -0.03em;
   color: #ffffff;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-wrapper-scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  background-color: #ffffff;
+  transition:
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:focus,
@@ -167,6 +218,12 @@ img {
 .hero-link-scroll:hover {
   color: #fd9222;
 }
+
+.hero-link-scroll:hover .icon-wrapper-scroll,
+.hero-link-scroll:focus .icon-wrapper-scroll {
+  fill: #ffffff;
+  background-color: #fd9222;
+}
 /* =========== end Hero Section =========== */
 
 /* =========== Benefits section =========== */
@@ -177,8 +234,8 @@ img {
 .main-benefits .container {
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 52px;
-  padding-right: 52px;
+  padding-left: 34px;
+  padding-right: 34px;
   margin-bottom: 72px;
 }
 
@@ -197,11 +254,34 @@ img {
 
 .benefits-menu {
   display: flex;
-  gap: 70px;
+  gap: 88px;
 }
 
 .benefits-item {
-  flex-basis: calc((100% - 70px * 2) / 3);
+  flex-basis: calc((100% - 88px * 2) / 3);
+  position: relative;
+}
+
+.benefits-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 62px;
+  height: 62px;
+  margin-bottom: 22px;
+}
+
+.border::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -18px;
+  width: 1px;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(50%);
 }
 
 .main-title-three {
@@ -257,18 +337,16 @@ img {
 }
 
 .ingredients-item {
-  padding: 28px 32px;
-  border-radius: 15px;
   flex-basis: calc((100% - 3 * 19px) / 4);
+  border-radius: 15px;
+  border: 1px solid transparent;
   background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
 }
 
-.ingredients-item:first-child {
-  background-color: #fd9222;
-}
-
-.ingredients-item:nth-child(3) {
-  background-color: #1e1823;
+.ingredients-card {
+  padding: 28px 32px;
 }
 
 .ingredients-images {
@@ -280,8 +358,79 @@ img {
   text-transform: uppercase;
 }
 
+.main-ingredients .main-title-three {
+  color: #111111;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.overlay {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  overflow: auto;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.overlay-ingredient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #ffffff;
+  border-radius: 35px;
+  height: 24px;
+  background-color: #fd9222;
+}
+
+.overlay-benefits {
+  font-size: 10px;
+  line-height: 1.2;
+  color: #111111;
+  border: 1px solid #fd9222;
+  border-radius: 35px;
+  padding: 6px 16px;
+  width: 93px;
+  height: 24px;
+}
+
+.overlay-text {
+  color: #111111;
+}
+
+.ingredients-item:first-child {
+  background-color: #fd9222;
+}
+
+.ingredients-item:nth-child(3) {
+  background-color: #1e1823;
+}
+.ingredients-item:nth-child(2n) {
+  border: 1px solid #fd9222;
+}
+
 .ingredients-item:nth-child(odd) .ingredients-text {
   color: #ffffff;
+}
+
+.ingredients-item:hover .overlay {
+  transform: translateY(0);
 }
 /* ======= end Ingredients Section ======== */
 
@@ -311,14 +460,26 @@ img {
   margin-bottom: 28px;
 }
 
-.him-menu {
+.him-item {
+  max-width: 425px;
+  position: relative;
   padding-left: 16px;
 }
 
-.him-item {
-  list-style-type: initial;
-  max-width: 425px;
+.him-item:not(:last-child) {
   margin-bottom: 24px;
+}
+
+.him-text::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4c4c4c;
+  position: absolute;
+  top: 5px;
+  left: 0;
 }
 /* ====== end How it’s made Section ======= */
 
@@ -389,6 +550,9 @@ img {
   width: 222px;
   height: 50px;
   background-color: #ffffff;
+  transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reviews-button:focus,
@@ -435,6 +599,7 @@ img {
   color: #fff;
   font-style: normal;
   margin-bottom: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:focus,
@@ -451,11 +616,11 @@ img {
   color: #ffffff;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-page .nav-link:hover,
 .footer-page .nav-link:focus {
   color: #fd9222;
 }
-
 /* =========== end Footer Page ============ */
